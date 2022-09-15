@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class move : MonoBehaviour
+public class score : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed;
+    public static int Score = 0;
     void Start()
     {
         
@@ -14,8 +15,6 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.position += Vector3.left * speed * Time.deltaTime;
-
+        GetComponent<Text>().text = Score.ToString();
     }
 }
